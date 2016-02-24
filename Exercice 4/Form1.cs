@@ -68,6 +68,20 @@ namespace Exercice_4
                 //MessageBox.Show("Une erreur de saisie s'est produite");
                 er.Message.ToString();
             }
+
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
+            {
+                DialogResult dr = MessageBox.Show
+                    ("Vous avez bien été ajouté à liste des fournisseurs !! \n Souhaitez-vous quitter l'application ?", "Ajout Fournisseur", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                if (dr == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez saisir tous les champs.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,29 +92,6 @@ namespace Exercice_4
             {
                 Application.Exit();
             }
-        }
-
-
-
-
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -118,7 +109,7 @@ namespace Exercice_4
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            Regex re_rue = new Regex(@"^[a-zA-Z]{1,50}$");
+            Regex re_rue = new Regex(@"^[0-9a-zA-Z é]{1,50}$");
             if (re_rue.IsMatch(textBox2.Text))
             {
                 textBox2.BackColor = Color.Green;
@@ -154,5 +145,56 @@ namespace Exercice_4
                 textBox4.BackColor = Color.Red;
             }
         }
+
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            Regex re_con = new Regex(@"^[a-zA-Z]{1,15}$");
+            if (re_con.IsMatch(textBox5.Text))
+            {
+                textBox5.BackColor = Color.Green;
+            }
+            else
+            {
+                textBox5.BackColor = Color.Red;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
