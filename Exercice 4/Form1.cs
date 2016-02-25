@@ -32,7 +32,7 @@ namespace Exercice_4
             con = new SqlConnection("server = . ; database = papyrus ; integrated security = true;");
             try
             {
-                //ouverture connexion
+            //ouverture connexion
                 con.Open();
             }
             catch (Exception)
@@ -61,7 +61,8 @@ namespace Exercice_4
                 }
 
                 requete.ExecuteNonQuery();
-                con.Close();
+
+                
             }
             catch (Exception er)
             {
@@ -82,6 +83,9 @@ namespace Exercice_4
             {
                 MessageBox.Show("Veuillez saisir tous les champs.");
             }
+
+            //fermeture de la connexion
+            con.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
