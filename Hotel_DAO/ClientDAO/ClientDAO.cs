@@ -9,7 +9,7 @@ namespace Hotel_DAO
 {
 
 
-    class ClientDAO
+    public class ClientDAO
     {
         SqlConnection con;
 

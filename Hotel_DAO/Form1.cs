@@ -247,7 +247,7 @@ namespace Hotel_DAO
 
         }
 
-        //Button1 : Modif client
+        //Button2 : Modif client
         private void button2_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
@@ -262,7 +262,7 @@ namespace Hotel_DAO
             }
         }
 
-        //Button1 : Suppr client
+        //Button3 : Suppr client
         private void button3_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
